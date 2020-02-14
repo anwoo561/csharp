@@ -58,6 +58,27 @@ namespace Sudokew
             Application.Exit();
         }
 
+        private void shuffle()
+        {
+            Random amt = new Random();
+
+            int a;
+            int r1;
+            int c1;
+
+            for (int i = 0; i < 20; i++)
+            {
+                c1 = amt.Next(0, 9);
+                System.Threading.Thread.Sleep(10);
+                r1 = amt.Next(0, 9);
+                System.Threading.Thread.Sleep(10);
+                a = amt.Next(1, 9);
+
+                m_vals[r1, c1].Text = a.ToString();
+                m_vals[r1, c1].ReadOnly = true;
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
         }
@@ -70,6 +91,7 @@ namespace Sudokew
         private void resetbutton_Click(object sender, EventArgs e)
         {
             clearBoard();
+            shuffle();
         }
 
         int getVal(int r, int c)

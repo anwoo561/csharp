@@ -42,7 +42,7 @@ namespace Sudokew
         {
             for (int i = 0; i < 9; i++)
             {
-                for (int j = i+1; j < 9; j++)
+                for (int j = i + 1; j < 9; j++)
                 {
                     if (m_nums[i] == m_nums[j]  && m_nums[i] != 0)
                         return false;
