@@ -10,7 +10,6 @@ namespace Sudokew
         {
             InitializeComponent();
             fillArray();
-            Console.Beep();
         }
         // Connect text boxes to array
         public void fillArray()
@@ -81,11 +80,7 @@ namespace Sudokew
 
         private void Form1_Load(object sender, EventArgs e)
         {
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Run(new AboutBox());
+            Console.Beep();
         }
 
         private void resetbutton_Click(object sender, EventArgs e)
